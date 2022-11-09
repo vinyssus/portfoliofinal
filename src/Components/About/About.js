@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./About.css";
 import Typography from "@mui/material/Typography";
 import { Switch } from "@mui/material";
 
 function About() {
+
+  
+
   return (
     <div className="about">
       <div className="column">
@@ -25,7 +28,7 @@ function About() {
           <ol className="listcom">
             <li>
               {" "}
-              <Switch /><p>Language</p>
+              <Switch id="checkinput" checked /><p>Language</p>
             </li>
             <li>
               {" "}
