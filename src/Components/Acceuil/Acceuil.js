@@ -9,12 +9,12 @@ function Acceuil() {
         <div className="titre">
           <h1>Je suis Viny Rodolphe</h1>
           <div className="defile">
-            <span className="txt t1">- software engineer student&nbsp;</span>
-            <span className="txt t2">- software engineer student&nbsp;</span>
+            <span className="txt t1">- Ingenieur logiciel &nbsp;</span>
+            <span className="txt t2">- Ingenieur logiciel &nbsp;</span>
           </div>
         </div>
         <div className="boutton">
-          <a href="https://drive.google.com/file/d/1At4FTYQli3E4mno5gwnEY_sngHgRp6GF/view?usp=share_link">
+          <a target="_blank" href="https://drive.google.com/file/d/1SwNt32RlgOV9WVM9wd2gY1O601ktxFuw/view?usp=sharing">
             <span></span>
             <span></span>
             <span></span>

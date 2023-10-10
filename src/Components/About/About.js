@@ -1,16 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import "./About.css";
-import Typography from "@mui/material/Typography";
-import { Switch } from "@mui/material";
 
 function About() {
 
   
 
   return (
-    <div className="text-center">
-     About
-    </div>
+    <>
+      <h2 style={{color:'white',textAlign:'center'}}>A Propos de Moi</h2>
+      <h3 className="text-white text-center">teste bootstrap</h3>
+    </>
   );
 }
 
