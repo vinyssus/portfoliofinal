@@ -72,7 +72,8 @@ function Projet() {
                 <div className="texte">
                   <span>
                     Ceci est une application semblable a booking qui permet de
-                    faire des reservations en afrique
+                    faire des reservations en afrique faire des reservations en afrique
+                    faire.
                   </span>
                 </div>
                 <div className="bouton">
