@@ -77,9 +77,9 @@ function Projet() {
                   </span>
                 </div>
                 <div className="bouton">
-                  <a href="#">
+                  {/* <a href="#">
                     <button>Visitez</button>
-                  </a>
+                  </a> */}
                 </div>
               </div>
           </div>
