@@ -9,8 +9,8 @@ function Acceuil() {
         <div className="titre">
           <h1>Je suis Viny Rodolphe</h1>
           <div className="defile">
-            <span className="txt t1">- Ingenieur logiciel &nbsp;</span>
-            <span className="txt t2">- Ingenieur logiciel &nbsp;</span>
+            <span className="txt t1">- Consultant IT &nbsp;</span>
+            <span className="txt t2">- Ingénieur Logiciel &nbsp;</span>
           </div>
         </div>
         <div className="boutton">
