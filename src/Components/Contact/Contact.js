@@ -42,60 +42,41 @@ const Contact = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <div className="contact">
-        <form className="form" ref={form} onSubmit={sendEmail}>
-          <h2>Contact</h2>
-
-          <TextField
-            id="outlined-mail-input"
-            label="Email:"
-            autoComplete="current-email"
-            type="email"
-            name="user_email"
-            color="secondary"
-            value={text}
-            focused
-            onChange={(e) => {
-              setText(e.target.value);
-            }}
-            required
-          />
-
-          <div id="message">
-            <TextField
-              id="outlined-multiline-static"
-              label="Message: *"
-              multiline
-              rows={4}
-              // defaultValue="Default Value"
-              color="secondary"
-              fullWidth
-              // autoFocus
-              focused
-              // contrastText
-              value={message}
-              onChange={(e) => {
-                setMessage(e.target.value);
-              }}
-            />
-          </div>
-          <div className="btn">
-            <Button
-              variant="contained"
-              endIcon={<SendIcon />}
-              onClick={() => {
-                if (text !== "" && message !== "") {
-                  swal.fire("Message envoyer", "Restez en attente", "success");
-                }
-              }}
-              type="submit"
-              value="Submit"
-            >
-              Envoyer
-            </Button>
-          </div>
-        </form>
-      </div>
+    <div className="contact">
+  <h2>Contactez-moi</h2>
+  <form className="form" ref={form} onSubmit={sendEmail}>
+    <TextField
+      id="outlined-mail-input"
+      label="Email"
+      type="email"
+      name="user_email"
+      color="primary"
+      variant="outlined"
+      fullWidth
+      required
+    />
+    <TextField
+      id="outlined-multiline-static"
+      label="Message"
+      multiline
+      rows={4}
+      color="primary"
+      variant="outlined"
+      fullWidth
+      required
+    />
+    <div className="btn">
+      <Button
+        variant="contained"
+        color="primary"
+        type="submit"
+        endIcon={<SendIcon />}
+      >
+        Envoyer
+      </Button>
+    </div>
+  </form>
+</div>
     </ThemeProvider>
   );
 };
