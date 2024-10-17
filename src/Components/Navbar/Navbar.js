@@ -5,6 +5,10 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState("/");
+  const handleActive = (path) => {
+    setActiveLink(path)
+  }
 
   return (
     <div className="nav">
@@ -13,7 +17,7 @@ function Navbar() {
           <i className="fa-solid fa-phone"></i>
         </a>
         <p className="call2">
-          <i className="fa-solid fa-phone"></i> +213 658060432
+          <i className="fa-solid fa-phone"></i> +237 658060432
         </p>
       </div>
 
@@ -23,8 +27,10 @@ function Navbar() {
             <Link
               onClick={() => {
                 setMenuOpen(false);
+               handleActive('/');
               }}
               to="/"
+              class={activeLink === '/' ? 'active-link' : 'nav-link'}
             >
               Acceuil
             </Link>
@@ -33,8 +39,10 @@ function Navbar() {
             <Link
               onClick={() => {
                 setMenuOpen(false);
+                handleActive('/About');
               }}
               to="/About"
+              class={activeLink === '/About' ? 'active-link' : 'nav-link'}
             >
               A propos
             </Link>
@@ -43,8 +51,10 @@ function Navbar() {
             <Link
               onClick={() => {
                 setMenuOpen(false);
+                handleActive('/Projet');
               }}
               to="/Projet"
+              class={activeLink === '/Projet' ? 'active-link' : 'nav-link'}
             >
               Projets
             </Link>
@@ -54,8 +64,10 @@ function Navbar() {
             <Link
               onClick={() => {
                 setMenuOpen(false);
+                handleActive('/Contact');
               }}
               to="/Contact"
+              class={activeLink === '/Contact' ? 'active-link' : 'nav-link'}
             >
               contact
             </Link>

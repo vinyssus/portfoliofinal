@@ -156,6 +156,16 @@ li a:hover{
 
 }
 
+.nav-link {
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  .active-link {
+    color: red;
+    font-weight: bold;
+  }
+
 @media (max-width: 450px){
     .call1{
       display: block;
