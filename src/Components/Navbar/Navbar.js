@@ -13,7 +13,7 @@ function Navbar() {
           <i className="fa-solid fa-phone"></i>
         </a>
         <p className="call2">
-          <i className="fa-solid fa-phone"></i> +216 99501379
+          <i className="fa-solid fa-phone"></i> +213 658060432
         </p>
       </div>
 
