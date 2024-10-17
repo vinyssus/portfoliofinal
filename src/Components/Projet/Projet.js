@@ -9,16 +9,19 @@ function Projet() {
   var imgList = [ayila,compens,fonakeukeu];
   var linkList = ["https://ayilaa.com/fr/","https://compensbank.com/fr/","https://adf.fonakeukeu.org/"];
   var descriptionList = ["Ayila'a est une application de reservation des bons coins au cameroun. Elle facilite l'intégration des étrangé.","Compens est une application qui repond a la fois au e-commerce et au transactions bancaire. Grace a elle les achats en ligne sont beaucoup plus simplifiés","Fonakeukeu est une application associative. Elle est utilisé pour le developpement d'un village et pour l'entraide entre les membres."];
+  var titleList = ["Application de reservation des bons coins", "Application bancaire et d'e-commerce", "Application de gestion des cotisations"]
   var num = 0;
   
   var changeImage = () => {
     let image = document.getElementById("slide")
     let description = document.getElementById("description")
     let link = document.getElementById("link")
+    let title = document.getElementById("title")
     image.style.opacity = 0; // Commence le fondu sortant
   
     setTimeout(() => {
       description.innerHTML = descriptionList[num];
+      title.innerHTML = titleList[num];
       link.href = linkList[num];
       image.src = imgList[num]; // Change l'image une fois le fondu sortant terminé
       image.style.opacity = 1; // Lance le fondu entrant
@@ -36,6 +39,9 @@ function Projet() {
     if (num >= descriptionList.length) {
       num = 0;
     }
+    if (num >= titleList.length) {
+      num = 0;
+    }
     changeImage();
   };
   
@@ -49,6 +55,9 @@ function Projet() {
     }
     if (num < 0) {
       num = descriptionList.length - 1;
+    }
+    if (num < 0) {
+      num = titleList.length - 1;
     }
     changeImage();
   };  
@@ -65,7 +74,7 @@ function Projet() {
             <img id="slide" src={ayila} alt="img" />
           </div>
           <div className="div_contenu">
-            <span className="titre">Application de mise en relation</span>
+            <span className="titre" id="title">Application de reservation des bons coins</span>
             <div className="stars">
               <i className="fa fa-star" aria-hidden="true"></i>
               <i className="fa fa-star" aria-hidden="true"></i>
