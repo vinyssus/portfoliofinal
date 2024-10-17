@@ -13,9 +13,7 @@ function About() {
             <div class="about-me">
             <h3 class="subtitle">Je suis Viny Rodolphe Naoussi</h3>
             <p class="description">
-              Développeur backend passionné avec une expertise dans divers
-              technologies. Je m'efforce de créer des solutions innovantes qui
-              améliorent l'expérience utilisateur.
+            En tant que développeur full stack passionné par les nouvelles technologies, j'apporte une expertise approfondie dans la création de solutions innovantes et performantes.
             </p>
             </div>
           </div>
