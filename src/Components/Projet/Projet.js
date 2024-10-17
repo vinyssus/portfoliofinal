@@ -3,18 +3,23 @@ import "./Projet.css";
 import ayila from "../../assets/image/ayila.jpg";
 import compens from "../../assets/image/compens.jpg";
 import fonakeukeu from "../../assets/image/fonakeukeu.jpg";
-import miservices from "../../assets/image/miservices2.png";
-import ayilaweb from "../../assets/image/ayilaweb.png";
 
 function Projet() {
-  var imgList = [ayila, compens, fonakeukeu, miservices, ayilaweb];
+
+  var imgList = [ayila,compens,fonakeukeu];
+  var linkList = ["https://ayilaa.com/fr/","https://compensbank.com/fr/","https://adf.fonakeukeu.org/"];
+  var descriptionList = ["Ayila'a est une application de reservation des bons coins au cameroun. Elle facilite l'intégration des étrangé.","Compens est une application qui repond a la fois au e-commerce et au transactions bancaire. Grace a elle les achats en ligne sont beaucoup plus simplifiés","Fonakeukeu est une application associative. Elle est utilisé pour le developpement d'un village et pour l'entraide entre les membres."];
   var num = 0;
   
   var changeImage = () => {
-    let image = document.getElementById("slide");
+    let image = document.getElementById("slide")
+    let description = document.getElementById("description")
+    let link = document.getElementById("link")
     image.style.opacity = 0; // Commence le fondu sortant
   
     setTimeout(() => {
+      description.innerHTML = descriptionList[num];
+      link.href = linkList[num];
       image.src = imgList[num]; // Change l'image une fois le fondu sortant terminé
       image.style.opacity = 1; // Lance le fondu entrant
     }, 500); // 500ms correspond à la durée de l'animation de fondu
@@ -25,6 +30,12 @@ function Projet() {
     if (num >= imgList.length) {
       num = 0;
     }
+    if (num >= linkList.length) {
+      num = 0;
+    }
+    if (num >= descriptionList.length) {
+      num = 0;
+    }
     changeImage();
   };
   
@@ -32,6 +43,12 @@ function Projet() {
     num--;
     if (num < 0) {
       num = imgList.length - 1;
+    }
+    if (num < 0) {
+      num = linkList.length - 1;
+    }
+    if (num < 0) {
+      num = descriptionList.length - 1;
     }
     changeImage();
   };  
@@ -53,15 +70,15 @@ function Projet() {
               <i className="fa fa-star" aria-hidden="true"></i>
               <i className="fa fa-star" aria-hidden="true"></i>
               <i className="fa fa-star" aria-hidden="true"></i>
+              <i className="fa fa-star" aria-hidden="true"></i>
             </div>
             <div className="description">
-              <p>
-                Ceci est une application semblable à Booking qui permet de faire
-                des réservations en Afrique.
+              <p id="description">
+              Ayila'a est une application de reservation des bons coins au cameroun. Elle facilite l'intégration des étrangé.
               </p>
             </div>
             <div className="bouton">
-              <a href="#">
+              <a target="_blank" href="https://ayilaa.com/fr/" id="link">
                 <button>Visitez</button>
               </a>
             </div>
